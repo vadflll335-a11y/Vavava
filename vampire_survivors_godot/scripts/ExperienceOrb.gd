@@ -17,7 +17,7 @@ func _ready():
 	add_to_group("pickups")
 	
 	# Connect signals
-	body_entered.connect(_on_body_entered)
+	connect("body_entered", _on_body_entered)
 	
 	# Auto-move to player after short delay
 	var timer = Timer.new()
