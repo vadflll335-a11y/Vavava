@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://i5u9n4m8p3k6w"]
 
-[ext_resource type="Script" path="res://scripts/ExperienceOrb.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/ExperienceOrb.gd" id="1_n8k5m"]
 
-[sub_resource type="CircleShape2D" id="1"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m9p4n"]
 radius = 8.0
 
 [node name="ExperienceOrb" type="Area2D" groups=["pickups"]]
 collision_layer = 16
 collision_mask = 1
-script = ExtResource("1")
+script = ExtResource("1_n8k5m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0.8, 1, 1)
@@ -16,6 +16,4 @@ scale = Vector2(0.125, 0.125)
 texture = preload("res://icon.svg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("1")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+shape = SubResource("CircleShape2D_m9p4n")

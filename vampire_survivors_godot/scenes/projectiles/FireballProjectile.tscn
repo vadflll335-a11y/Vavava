@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://h4t8m3n7p2k5v"]
 
-[ext_resource type="Script" path="res://scripts/projectiles/FireballProjectile.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/projectiles/FireballProjectile.gd" id="1_m7n4p"]
 
-[sub_resource type="CircleShape2D" id="1"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_k6p3m"]
 radius = 6.0
 
 [node name="FireballProjectile" type="Area2D"]
 collision_layer = 8
 collision_mask = 2
-script = ExtResource("1")
+script = ExtResource("1_m7n4p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.3, 0, 1)
@@ -16,7 +16,7 @@ scale = Vector2(0.1, 0.1)
 texture = preload("res://icon.svg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("1")
+shape = SubResource("CircleShape2D_k6p3m")
 
 [node name="Trail" type="Line2D" parent="."]
 width = 3.0
