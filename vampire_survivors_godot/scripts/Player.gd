@@ -18,9 +18,9 @@ func _ready():
 	current_health = max_health
 	game_manager = get_node("/root/Main")
 	
-	# Connect hurt box signal
+	# Connect signals
 	if hurt_box:
-		hurt_box.area_entered.connect(_on_hurt_box_area_entered)
+		hurt_box.connect("area_entered", _on_hurt_box_area_entered)
 	
 	# Add default weapon
 	add_weapon("BasicGun")
