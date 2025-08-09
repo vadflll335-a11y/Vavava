@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj5k2l9m3nq6p"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_r8w4t"]
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h9j2k"]
+[sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(24, 24)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m5p8n"]
+[sub_resource type="CircleShape2D" id="2"]
 radius = 16.0
 
 [node name="BasicEnemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 2
 collision_mask = 1
-script = ExtResource("1_r8w4t")
+script = ExtResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 0, 1)
@@ -19,14 +19,14 @@ scale = Vector2(0.375, 0.375)
 texture = preload("res://icon.svg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_h9j2k")
+shape = SubResource("1")
 
 [node name="DamageArea" type="Area2D" parent="." groups=["enemy_damage"]]
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
-shape = SubResource("CircleShape2D_m5p8n")
+shape = SubResource("2")
 
 [node name="HealthBar" type="ColorRect" parent="."]
 offset_left = -10.0
