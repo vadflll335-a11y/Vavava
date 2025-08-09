@@ -25,8 +25,11 @@ func _ready():
 	# Load enemy scenes if not set
 	if enemy_scenes.is_empty():
 		var basic_enemy = load("res://scenes/enemies/BasicEnemy.tscn")
+		var fast_enemy = load("res://scenes/enemies/FastEnemy.tscn")
 		if basic_enemy:
 			enemy_scenes.append(basic_enemy)
+		if fast_enemy:
+			enemy_scenes.append(fast_enemy)
 
 func _process(delta):
 	# Increase spawn rate over time
