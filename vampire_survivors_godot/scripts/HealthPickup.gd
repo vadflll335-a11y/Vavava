@@ -13,7 +13,7 @@ func _ready():
 	add_to_group("pickups")
 	
 	# Connect signals
-	body_entered.connect(_on_body_entered)
+	connect("body_entered", _on_body_entered)
 
 func _on_body_entered(body):
 	if body == player:
