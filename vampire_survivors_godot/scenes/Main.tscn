@@ -1,15 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3xk0gy85bns1"]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_0k4v8"]
-[ext_resource type="Script" path="res://scripts/Player.gd" id="2_7j3m9"]
-[ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3_hp2vx"]
-[ext_resource type="Script" path="res://scripts/UI.gd" id="4_d8n5w"]
-[ext_resource type="Script" path="res://scripts/CameraController.gd" id="5_m7p4r"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/EnemySpawner.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/UI.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/CameraController.gd" id="5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1k3j8"]
+[sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(32, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8m2n7"]
+[sub_resource type="CircleShape2D" id="2"]
 radius = 40.0
 
 [node name="Main" type="Node2D"]
