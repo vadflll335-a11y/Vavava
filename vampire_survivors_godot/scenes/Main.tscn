@@ -13,38 +13,38 @@ size = Vector2(32, 32)
 radius = 40.0
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource("1_0k4v8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 540)
-script = preload("res://scripts/CameraController.gd")
+script = ExtResource("5_m7p4r")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(960, 540)
 collision_layer = 1
 collision_mask = 2
-script = ExtResource("2")
+script = ExtResource("2_7j3m9")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 modulate = Color(0, 1, 0, 1)
-texture = preload("res://icon.svg")
 scale = Vector2(0.5, 0.5)
+texture = preload("res://icon.svg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("1")
+shape = SubResource("RectangleShape2D_1k3j8")
 
 [node name="HurtBox" type="Area2D" parent="Player"]
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/HurtBox"]
-shape = SubResource("2")
+shape = SubResource("CircleShape2D_8m2n7")
 
 [node name="EnemySpawner" type="Node2D" parent="."]
-script = ExtResource("3")
+script = ExtResource("3_hp2vx")
 
 [node name="UI" type="CanvasLayer" parent="."]
-script = ExtResource("4")
+script = ExtResource("4_d8n5w")
 
 [node name="HealthBar" type="ProgressBar" parent="UI"]
 anchors_preset = 2
