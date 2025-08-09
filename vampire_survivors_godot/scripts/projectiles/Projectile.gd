@@ -17,9 +17,9 @@ func _ready():
 	# Add to projectiles group
 	add_to_group("projectiles")
 	
-	# Connect area entered signal
-	area_entered.connect(_on_area_entered)
-	body_entered.connect(_on_body_entered)
+	# Connect signals
+	connect("area_entered", _on_area_entered)
+	connect("body_entered", _on_body_entered)
 	
 	# Auto-destroy after lifetime
 	var timer = Timer.new()
