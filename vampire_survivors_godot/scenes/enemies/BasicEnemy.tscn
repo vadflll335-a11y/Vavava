@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj5k2l9m3nq6p"]
+[gd_scene load_steps=4 format=3 uid="uid://bj5k2l9m3nq6p"]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_r8w4t"]
 
